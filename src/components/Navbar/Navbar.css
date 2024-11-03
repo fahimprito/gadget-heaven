@@ -1,5 +1,7 @@
 ul a.active {
     color: #9538E2;
     padding:  0.5rem 1rem;
-    font-weight: 700;
+    border: 1px solid #9538E2;
+    border-radius: 0.5rem;
+    font-weight: 600;
 }
