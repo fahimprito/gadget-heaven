@@ -1,0 +1,5 @@
+ul a.active {
+    color: #9538E2;
+    padding:  0.5rem 1rem;
+    font-weight: 700;
+}
