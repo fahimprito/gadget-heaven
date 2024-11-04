@@ -1,0 +1,32 @@
+[
+    {
+        "button_id": "1",
+        "title": "All Products",
+        "is_active": true
+    },
+    {
+        "button_id": "2",
+        "title": "Laptops",
+        "is_active": false
+    },
+    {
+        "button_id": "3",
+        "title": "Phones",
+        "is_active": false
+    },
+    {
+        "button_id": "4",
+        "title": "Smart Watches",
+        "is_active": false
+    },
+    {
+        "button_id": "5",
+        "title": "Accessories",
+        "is_active": false
+    },
+    {
+        "button_id": "6",
+        "title": "Tablets",
+        "is_active": false
+    }
+]

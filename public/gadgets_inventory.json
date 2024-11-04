@@ -1,0 +1,258 @@
+[
+    {
+        "product_id": "287",
+        "product_title": "Apple Watch Series 8",
+        "product_image": "https://i.ibb.co.com/xhsRgf8/Apple-Watch-Series-8.png",
+        "category": "Smart Watches",
+        "price": 399,
+        "description": "Advanced smartwatch with health tracking and GPS.",
+        "specification": [
+            "1.7-inch Retina display",
+            "Blood oxygen sensor",
+            "ECG app",
+            "Swim-proof design",
+            "Up to 18 hours battery life"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "531",
+        "product_title": "Samsung Galaxy S24",
+        "product_image": "https://i.ibb.co.com/ZcfgxvZ/s24-ultra.jpg",
+        "category": "Phones",
+        "price": 849,
+        "description": "The latest flagship smartphone with advanced camera technology and a powerful processor.",
+        "specification": [
+            "6.2-inch Dynamic AMOLED 2X display",
+            "Snapdragon 8 Gen 3",
+            "8GB RAM",
+            "256GB Storage",
+            "Triple rear camera with 50MP main lens"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "1023",
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.ibb.co.com/m0vgGRS/Dell-XPS13.webp",
+        "category": "Laptops",
+        "price": 1200,
+        "description": "Ultra-slim and powerful laptop with a 13.3-inch InfinityEdge display.",
+        "specification": [
+            "13.3-inch FHD display",
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "Integrated Intel Iris Xe Graphics"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "201",
+        "product_title": "JBL Flip 6",
+        "product_image": "https://i.ibb.co.com/VBs35tS/JBLFlip6.jpg",
+        "category": "Accessories",
+        "price": 129,
+        "description": "Portable waterproof Bluetooth speaker with powerful sound.",
+        "specification": [
+            "12-hour battery life",
+            "IP67 waterproof",
+            "Bluetooth 5.1",
+            "Dual passive radiators",
+            "PartyBoost feature"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "873",
+        "product_title": "Apple MacBook Air M2",
+        "product_image": "https://i.ibb.co.com/KFt6t2S/Apple-Mac-Book-Air-M2.jpg",
+        "category": "Laptops",
+        "price": 999,
+        "description": "Lightweight laptop powered by the M2 chip, offering impressive performance.",
+        "specification": [
+            "13.6-inch Retina display",
+            "Apple M2 chip",
+            "8GB RAM",
+            "256GB SSD",
+            "Integrated Apple GPU"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "1145",
+        "product_title": "Google Pixel 7",
+        "product_image": "https://i.ibb.co.com/LznMwVv/Pixel-7.jpg",
+        "category": "Phones",
+        "price": 599,
+        "description": "Smooth and powerful smartphone with an excellent camera and Google’s software.",
+        "specification": [
+            "6.3-inch OLED display",
+            "Google Tensor G2",
+            "8GB RAM",
+            "128GB Storage",
+            "50MP main camera"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "302",
+        "product_title": "Logitech MX Master 3",
+        "product_image": "https://i.ibb.co.com/cQkRsnD/Logitech-MX-Master-3.jpg",
+        "category": "Accessories",
+        "price": 99,
+        "description": "Ergonomic wireless mouse with precise control and customizable buttons.",
+        "specification": [
+            "Ergonomic design",
+            "4000 DPI sensor",
+            "USB-C quick charging",
+            "Flow cross-computer control",
+            "Logitech Options software"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "4101",
+        "product_title": "HP Spectre x360",
+        "product_image": "https://i.ibb.co.com/JnZCvMJ/HP-Spectre-x360.jpg",
+        "category": "Laptops",
+        "price": 1400,
+        "description": "Convertible laptop with a 4K display and strong performance for creative tasks.",
+        "specification": [
+            "13.5-inch 4K OLED display",
+            "Intel Core i7",
+            "16GB RAM",
+            "1TB SSD",
+            "360-degree hinge design"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "240",
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://i.ibb.co.com/yXN6Pxr/Sony-WH-1000-XM5.jpg",
+        "category": "Accessories",
+        "price": 350,
+        "description": "Industry-leading noise-canceling headphones with exceptional sound quality.",
+        "specification": [
+            "Wireless Bluetooth",
+            "Noise Cancellation",
+            "Up to 30 hours battery life",
+            "Touch controls",
+            "Voice assistant integration"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "570",
+        "product_title": "Samsung Galaxy Watch 5",
+        "product_image": "https://i.ibb.co.com/FxfRDHt/Samsung-Galaxy-Watch-5.jpg",
+        "category": "Smart Watches",
+        "price": 299,
+        "description": "Smartwatch with body composition analysis and long-lasting battery.",
+        "specification": [
+            "1.4-inch Super AMOLED display",
+            "WearOS",
+            "Blood pressure monitor",
+            "Up to 40 hours battery life",
+            "Heart rate monitor"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "1104",
+        "product_title": "Asus ROG Zephyrus G14",
+        "product_image": "https://i.ibb.co.com/h9WZkJ3/Asus-ROG-Zephyrus-G14.jpg",
+        "category": "Laptops",
+        "price": 1600,
+        "description": "High-performance gaming laptop with a powerful GPU and fast refresh rate.",
+        "specification": [
+            "14-inch QHD display",
+            "AMD Ryzen 9",
+            "16GB RAM",
+            "1TB SSD",
+            "NVIDIA GeForce RTX 3060"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "1198",
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.ibb.co.com/kDkFFpk/Lenovo-Think-Pad-X1-Carbon.jpg",
+        "category": "Laptops",
+        "price": 1350,
+        "description": "Business laptop with durability and security features.",
+        "specification": [
+            "14-inch FHD display",
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "Fingerprint reader"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "104",
+        "product_title": "iPhone 16 Pro",
+        "product_image": "https://i.ibb.co.com/1nMkHC1/i-Phone-16-Pro.png",
+        "category": "Phones",
+        "price": 1099,
+        "description": "Next-gen iPhone with advanced AI features, enhanced display, and improved battery life.",
+        "specification": [
+            "6.1-inch ProMotion OLED display",
+            "A18 Bionic chip with neural engine",
+            "48MP Pro camera system with LiDAR",
+            "Up to 26 hours of video playback",
+            "5G and Wi-Fi 6E capable",
+            "Face ID with enhanced security"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "482",
+        "product_title": "GoPro HERO11 Black",
+        "product_image": "https://i.ibb.co.com/QMv4csQ/Go-Pro-HERO11-Black.jpg",
+        "category": "Accessories",
+        "price": 399,
+        "description": "Durable action camera with 5.3K video recording and advanced stabilization.",
+        "specification": [
+            "5.3K video at 60fps",
+            "HyperSmooth 5.0 stabilization",
+            "Waterproof up to 33ft",
+            "Live streaming",
+            "20MP photos"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "5250",
+        "product_title": "Microsoft Surface Laptop 5",
+        "product_image": "https://i.ibb.co.com/cJwXs4S/Microsoft-Surface-Laptop5.webp",
+        "category": "Laptops",
+        "price": 1100,
+        "description": "Sleek laptop with excellent touch display and portability.",
+        "specification": [
+            "13.5-inch PixelSense display",
+            "Intel Core i5",
+            "8GB RAM",
+            "256GB SSD",
+            "Windows 11 Pro"
+        ],
+        "availability": true,
+        "rating": 4.4
+    }
+]
