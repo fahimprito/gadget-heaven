@@ -1,22 +1,5 @@
 [
     {
-        "product_id": "287",
-        "product_title": "Apple Watch Series 8",
-        "product_image": "https://i.ibb.co.com/xhsRgf8/Apple-Watch-Series-8.png",
-        "category": "Smart Watches",
-        "price": 399,
-        "description": "Advanced smartwatch with health tracking and GPS.",
-        "specification": [
-            "1.7-inch Retina display",
-            "Blood oxygen sensor",
-            "ECG app",
-            "Swim-proof design",
-            "Up to 18 hours battery life"
-        ],
-        "availability": true,
-        "rating": 4.7
-    },
-    {
         "product_id": "531",
         "product_title": "Samsung Galaxy S24",
         "product_image": "https://i.ibb.co.com/ZcfgxvZ/s24-ultra.jpg",
@@ -32,6 +15,23 @@
         ],
         "availability": true,
         "rating": 4.8
+    },
+    {
+        "product_id": "287",
+        "product_title": "Apple Watch Series 8",
+        "product_image": "https://i.ibb.co.com/xhsRgf8/Apple-Watch-Series-8.png",
+        "category": "Smart Watches",
+        "price": 399,
+        "description": "Advanced smartwatch with health tracking and GPS.",
+        "specification": [
+            "1.7-inch Retina display",
+            "Blood oxygen sensor",
+            "ECG app",
+            "Swim-proof design",
+            "Up to 18 hours battery life"
+        ],
+        "availability": true,
+        "rating": 4.7
     },
     {
         "product_id": "1023",
