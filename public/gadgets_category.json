@@ -1,32 +1,32 @@
 [
     {
-        "button_id": "1",
-        "title": "All Products",
+        "id": "1",
+        "category": "All Products",
         "is_active": true
     },
     {
-        "button_id": "2",
-        "title": "Laptops",
+        "id": "2",
+        "category": "Laptops",
         "is_active": false
     },
     {
-        "button_id": "3",
-        "title": "Phones",
+        "id": "3",
+        "category": "Phones",
         "is_active": false
     },
     {
-        "button_id": "4",
-        "title": "Smart Watches",
+        "id": "4",
+        "category": "Smart Watches",
         "is_active": false
     },
     {
-        "button_id": "5",
-        "title": "Accessories",
+        "id": "5",
+        "category": "Accessories",
         "is_active": false
     },
     {
-        "button_id": "6",
-        "title": "Tablets",
+        "id": "6",
+        "category": "Tablets",
         "is_active": false
     }
 ]
