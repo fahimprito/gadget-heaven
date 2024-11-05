@@ -7,7 +7,7 @@ const Home = () => {
     const categories = useLoaderData();
 
     return (
-        <div className="bg-base-200">
+        <div className="bg-gradient-to-t from-base-200 ...">
             <div>
                 <HomeBanner></HomeBanner>
             </div>

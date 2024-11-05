@@ -1,10 +1,17 @@
 import { FaBars } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { TbShoppingCart } from "react-icons/tb";
 import { FaRegHeart } from "react-icons/fa6";
-import "./Navbar.css"
+// import "./Navbar.css"
 
 const Navbar = () => {
+    const location = useLocation();
+
+    const homeLocation = location.pathname === '/';
+    const categoryLocation = location.pathname.startsWith('/category');
+    const navBarStyle = homeLocation || categoryLocation ? 'bg-[#9538E2] text-white rounded-3xl z-10' : '';
+    const mobileTab = homeLocation || categoryLocation ? 'text-black' : '';
+
     const links = <>
         <li><NavLink to={"/"}>Home</NavLink></li>
         <li><NavLink to={"/statistics"}>Statistics</NavLink></li>
@@ -12,8 +19,8 @@ const Navbar = () => {
     </>
 
     return (
-        <div>
-            <div className="container mx-auto navbar py-10 px-4">
+        <div className={`mx-4 lg:mx-10 mt-6 ${navBarStyle}`}>
+            <div className="container mx-auto navbar pb-10 pt-4 px-4">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost text-xl lg:hidden">
@@ -21,14 +28,14 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className={`menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow ${mobileTab}`}>
                             {links}
                         </ul>
                     </div>
                     <a className="text-2xl font-bold">Gadget Heaven</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="flex gap-8 text-lg">
+                    <ul className="menu menu-horizontal flex gap-8 text-lg">
                         {links}
                     </ul>
                 </div>
