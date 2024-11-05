@@ -1,8 +1,9 @@
 // import s24ultra from "../../assets/s24-ultra.jpeg"
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Product = ({ product }) => {
-    const { product_title, product_image, price } = product;
+    const { product_id, product_title, product_image, price } = product;
 
     return (
         <div>
@@ -12,9 +13,11 @@ const Product = ({ product }) => {
 
                     <h2 className="font-bold text-xl flex gap-4 items-center">{product_title}</h2>
                     <h4 className="flex gap-4 items-center text-gray-500">Price: ${price}</h4>
-                    <button className="btn btn-outline text-[#9538E2] hover:bg-[#9538E2] hover:border-none font-semibold lg:text-xl rounded-full px-8">
+                    <Link
+                        to={`/product/${product_id}`}
+                        className="btn btn-outline text-[#9538E2] hover:bg-[#9538E2] hover:border-none font-semibold lg:text-xl rounded-full px-8">
                         View Details
-                    </button>
+                    </Link>
                 </div>
 
             </div>
