@@ -19,7 +19,10 @@ const Products = () => {
     const categoryName = category ? category.replace(/-/g, " ") : "";
     // console.log(category);
     useEffect(() => {
-        if (categoryName) {
+        if (categoryName === "All Products") {
+            setAllProducts(products.slice(0, 9));
+        }
+        else if (categoryName) {
             const filteredByCategory = [...products].filter(
                 product => product.category == categoryName
             )
