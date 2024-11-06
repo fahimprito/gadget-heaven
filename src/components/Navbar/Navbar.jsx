@@ -1,5 +1,5 @@
 import { FaBars } from "react-icons/fa";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { TbShoppingCart } from "react-icons/tb";
 import { FaRegHeart } from "react-icons/fa6";
 // import "./Navbar.css"
@@ -11,6 +11,7 @@ const Navbar = () => {
     const categoryLocation = location.pathname.startsWith('/category');
     const navBarStyle = homeLocation || categoryLocation ? 'bg-[#9538E2] text-white rounded-3xl z-10' : '';
     const mobileTab = homeLocation || categoryLocation ? 'text-black' : '';
+    const cartWishIcon = homeLocation || categoryLocation ? 'bg-base-200 text-black' : '';
 
     const links = <>
         <li><NavLink to={"/"}>Home</NavLink></li>
@@ -41,8 +42,25 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-4">
-                    <div className="text-xl border p-3 rounded-full"><TbShoppingCart /></div>
-                    <div className="text-xl border p-3 rounded-full"><FaRegHeart /></div>
+                    {/* cart icon  */}
+                    <Link to={"/dashboard/cart"}>
+                        <div className={`relative text-xl border p-3 rounded-full ${cartWishIcon}`}>
+                            <TbShoppingCart />
+                            <span className="absolute -top-3 left-7 badge text-xs bg-red-100 border border-red-400">
+                                3
+                            </span>
+                        </div>
+                    </Link>
+                    
+                    {/* wish  */}
+                    <Link to={"/dashboard/wishlist"}>
+                        <div className={`relative text-xl border p-3 rounded-full ${cartWishIcon}`}>
+                            <FaRegHeart />
+                            <span className="absolute -top-3 left-7 badge text-xs bg-red-100 border border-red-400">
+                                5
+                            </span>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>

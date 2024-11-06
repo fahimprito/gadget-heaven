@@ -4,8 +4,8 @@ import { FaRegHeart } from "react-icons/fa6";
 import ProductDetailsBanner from "../components/Banner/ProductDetailsBanner";
 import { Rating, Star } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
-import { useState } from "react";
-import { addWishList } from "../utils/utilsForLocal";
+import { useEffect, useState } from "react";
+import { addWishList, getFullWishList } from "../utils/utilsForLocal";
 
 
 
@@ -15,6 +15,15 @@ const ProductsDetails = () => {
     const data = useLoaderData();
     const product = data.find(product => product.product_id === product_id);
     const { product_title, product_image, price, description, specification, rating } = product;
+
+    useEffect(() => {
+        const wishProduct = getFullWishList()
+        const isExist = wishProduct.find(item => item.product_id == product_id)
+        if (isExist) {
+            setIsWishlist(true)
+        }
+        
+    }, [product_id])
 
     const handleAddToWishlist = (product) => {
 
@@ -83,7 +92,7 @@ const ProductsDetails = () => {
                             disabled={isWishlist}
                             onClick={() => handleAddToWishlist(product)}
                             className={`text-xl border border-gray-300 p-3 rounded-full 
-                                ${isWishlist? "bg-slate-200 text-gray-400":"hover:border-gray-400"}`}>
+                                ${isWishlist ? "bg-slate-200 text-gray-400" : "hover:border-gray-400"}`}>
                             <FaRegHeart />
                         </button>
                     </div>
