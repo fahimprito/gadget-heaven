@@ -19,7 +19,7 @@ const WishItem = ({ product, handleRemove }) => {
                 </div>
                 <button
                     onClick={() => handleRemove(product_id)}
-                    className="text-4xl text-red-500 hover:bg-gray-200 rounded-full mr-10">
+                    className="text-4xl text-red-500 hover:bg-gray-200 rounded-full mr-6">
                     <MdOutlineCancel />
                 </button>
 

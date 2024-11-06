@@ -22,11 +22,17 @@ const AllWishItem = () => {
     return (
         <div>
             {
-                wishProduct.map(product => <WishItem
-                    key={product.product_id}
-                    product={product}
-                    handleRemove={handleRemove}
-                ></WishItem>)
+                wishProduct.length === 0 ? (
+                    <div className="p-4">
+                        <p className="text-4xl text-center text-red-300 font-bold">Wishlist is empty</p>
+                    </div>
+                ) : (
+                    wishProduct.map(product => <WishItem
+                        key={product.product_id}
+                        product={product}
+                        handleRemove={handleRemove}
+                    ></WishItem>)
+                )
             }
 
         </div>
