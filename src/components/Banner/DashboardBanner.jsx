@@ -1,6 +1,9 @@
+import { NavLink, useLocation } from "react-router-dom";
 
 
 const DashboardBanner = () => {
+    const location = useLocation();
+
     return (
         <div>
             <div className="bg-[#9538E2]">
@@ -10,12 +13,16 @@ const DashboardBanner = () => {
                         Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
                     </p>
                     <div className="flex gap-4 justify-center mt-2">
-                        <button className="btn btn-outline text-white hover:bg-[#0000003b] hover:border-none font-semibold lg:text-xl rounded-full px-8">
+                        <NavLink
+                            to={"/dashboard/cart"}
+                            className={({ isActive }) => `btn px-8 rounded-full font-semibold lg:text-xl ${isActive || location.pathname === "/dashboard" ? "bg-white text-[#9538E2]" : "btn-outline text-white hover:bg-[#0000003b] hover:border-none"}`}>
                             Cart
-                        </button>
-                        <button className="btn bg-white text-[#9538E2] font-semibold lg:text-xl rounded-full px-8">
+                        </NavLink>
+                        <NavLink
+                            to={"/dashboard/wishlist"}
+                            className={({ isActive }) => `btn px-8 rounded-full font-semibold lg:text-xl ${isActive ? "bg-white text-[#9538E2]" : "btn-outline text-white hover:bg-[#0000003b] hover:border-none"}`}>
                             Wishlist
-                        </button>
+                        </NavLink>
                     </div>
                 </div>
             </div>

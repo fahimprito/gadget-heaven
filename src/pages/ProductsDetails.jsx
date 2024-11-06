@@ -4,15 +4,23 @@ import { FaRegHeart } from "react-icons/fa6";
 import ProductDetailsBanner from "../components/Banner/ProductDetailsBanner";
 import { Rating, Star } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
+import { useState } from "react";
+import { addWishList } from "../utils/utilsForLocal";
 
 
 
 const ProductsDetails = () => {
+    const [isWishlist, setIsWishlist] = useState(false);
     const { product_id } = useParams();
     const data = useLoaderData();
     const product = data.find(product => product.product_id === product_id);
-
     const { product_title, product_image, price, description, specification, rating } = product;
+
+    const handleAddToWishlist = (product) => {
+
+        addWishList(product);
+        setIsWishlist(true);
+    }
 
     return (
         <div className="bg-base-200 border">
@@ -59,8 +67,8 @@ const ProductsDetails = () => {
                                 value={rating}
                                 readOnly
                                 itemStyles={{
-                                    itemShapes: Star, 
-                                    activeFillColor: '#ffbb27', 
+                                    itemShapes: Star,
+                                    activeFillColor: '#ffbb27',
                                     inactiveFillColor: '#d3d3d3'
                                 }}
                             />
@@ -71,7 +79,13 @@ const ProductsDetails = () => {
                     <div className="flex gap-4">
 
                         <button className="btn font-semibold lg:text-xl rounded-full border-gray-200 bg-[#9538E2] hover:bg-[#8126cc] text-white hover:text-white px-6">Add To Card <TbShoppingCart /></button>
-                        <button><div className="text-xl border border-gray-300 p-3 rounded-full"><FaRegHeart /></div></button>
+                        <button
+                            disabled={isWishlist}
+                            onClick={() => handleAddToWishlist(product)}
+                            className={`text-xl border border-gray-300 p-3 rounded-full 
+                                ${isWishlist? "bg-slate-200 text-gray-400":"hover:border-gray-400"}`}>
+                            <FaRegHeart />
+                        </button>
                     </div>
                 </div>
 
