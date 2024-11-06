@@ -2,6 +2,8 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { TbShoppingCart } from "react-icons/tb";
 import { FaRegHeart } from "react-icons/fa6";
 import ProductDetailsBanner from "../components/Banner/ProductDetailsBanner";
+import { Rating, Star } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css';
 
 
 
@@ -51,7 +53,19 @@ const ProductsDetails = () => {
                     </div>
                     <div>
                         <h5 className="text-xl font-bold mb-4">Rating: </h5>
-                        <p className="font-normal">{rating} ⭐⭐⭐⭐</p>
+                        <div className="font-normal flex items-center gap-4">
+                            <Rating
+                                style={{ maxWidth: 150 }}
+                                value={rating}
+                                readOnly
+                                itemStyles={{
+                                    itemShapes: Star, 
+                                    activeFillColor: '#ffbb27', 
+                                    inactiveFillColor: '#d3d3d3'
+                                }}
+                            />
+                            <p className="text-lg badge bg-base-300 p-3">{rating}</p>
+                        </div>
                     </div>
 
                     <div className="flex gap-4">
