@@ -4,12 +4,14 @@ import { FaRegHeart } from "react-icons/fa6";
 import ProductDetailsBanner from "../components/Banner/ProductDetailsBanner";
 import { Rating, Star } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { addWishList, getFullWishList } from "../utils/utilsForLocal";
+import { WishlistItem } from "../components/layouts/MainLayout";
 
 
 
 const ProductsDetails = () => {
+    const [wishProduct, setWishProduct] = useContext(WishlistItem);
     const [isWishlist, setIsWishlist] = useState(false);
     const { product_id } = useParams();
     const data = useLoaderData();
@@ -17,15 +19,17 @@ const ProductsDetails = () => {
     const { product_title, product_image, price, description, specification, rating } = product;
 
     useEffect(() => {
-        const wishProduct = getFullWishList()
-        const isExist = wishProduct.find(item => item.product_id == product_id)
+        const wishProduct = getFullWishList();
+        const isExist = wishProduct.find(item => item.product_id == product_id);
         if (isExist) {
-            setIsWishlist(true)
+            setIsWishlist(true);
         }
-        
+
     }, [product_id])
 
     const handleAddToWishlist = (product) => {
+        //add in context 
+        setWishProduct([...wishProduct, product])
 
         addWishList(product);
         setIsWishlist(true);

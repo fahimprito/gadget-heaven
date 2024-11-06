@@ -2,9 +2,13 @@ import { FaBars } from "react-icons/fa";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { TbShoppingCart } from "react-icons/tb";
 import { FaRegHeart } from "react-icons/fa6";
+import { useContext, useEffect } from "react";
+import { WishlistItem } from "../layouts/MainLayout";
+import { getFullWishList } from "../../utils/utilsForLocal";
 // import "./Navbar.css"
 
 const Navbar = () => {
+    const [wishProduct, setWishProduct] = useContext(WishlistItem);
     const location = useLocation();
 
     const homeLocation = location.pathname === '/';
@@ -19,6 +23,11 @@ const Navbar = () => {
         <li><NavLink to={"/dashboard"}>Dashboard</NavLink></li>
         <li><NavLink to={"/faq"}>FAQ</NavLink></li>
     </>
+
+    useEffect(() => {
+        const wishData = getFullWishList();
+        setWishProduct(wishData)
+    }, [setWishProduct])
 
     return (
         <div className={`mx-4 lg:mx-10 mt-6 ${navBarStyle}`}>
@@ -51,13 +60,13 @@ const Navbar = () => {
                             </span>
                         </div>
                     </Link>
-                    
+
                     {/* wish  */}
                     <Link to={"/dashboard/wishlist"}>
                         <div className={`relative text-xl border p-3 rounded-full ${cartWishIcon}`}>
                             <FaRegHeart />
                             <span className="absolute -top-3 left-7 badge text-xs bg-red-100 border border-red-400">
-                                5
+                                {wishProduct.length}
                             </span>
                         </div>
                     </Link>

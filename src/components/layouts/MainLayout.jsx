@@ -3,9 +3,15 @@ import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { createContext, useState } from "react";
 
+export const AddToCartItem = createContext([]);
+export const WishlistItem = createContext([]);
 
 const MainLayout = () => {
+    const [cartProduct, setCartProduct] = useState([]);
+    const [wishProduct, setWishProduct] = useState([]);
+
     return (
         <div>
             <ToastContainer
@@ -14,12 +20,17 @@ const MainLayout = () => {
                 closeOnClick={true}
                 draggable={true}
             />
+            <AddToCartItem.Provider value={[cartProduct, setCartProduct]}>
+                <WishlistItem.Provider value={[wishProduct, setWishProduct]}>
 
-            <Navbar></Navbar>
-            <div>
-                <Outlet></Outlet>
-            </div>
-            <Footer></Footer>
+                    <Navbar></Navbar>
+                    <div>
+                        <Outlet></Outlet>
+                    </div>
+                    <Footer></Footer>
+
+                </WishlistItem.Provider>
+            </AddToCartItem.Provider>
         </div>
     );
 };

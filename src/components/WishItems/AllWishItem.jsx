@@ -1,16 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import WishItem from "./WishItem";
 import { getFullWishList, removeWishList } from "../../utils/utilsForLocal";
+import { WishlistItem } from "../layouts/MainLayout";
 
 
 const AllWishItem = () => {
-    const [wishProduct, setWishProduct] = useState([]);
+    const [wishProduct, setWishProduct] = useContext(WishlistItem);
 
     useEffect(() => {
         const product = getFullWishList();
         setWishProduct(product);
 
-    }, [])
+    }, [setWishProduct])
 
     const handleRemove = (id) => {
         removeWishList(id)
