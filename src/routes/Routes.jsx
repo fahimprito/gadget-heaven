@@ -27,7 +27,8 @@ const router = createBrowserRouter([
             },
             {
                 path: "/statistics",
-                element: <Statistics></Statistics>
+                element: <Statistics></Statistics>,
+                loader: () => fetch('/gadgets_inventory.json')
             },
             {
                 path: "/dashboard",
