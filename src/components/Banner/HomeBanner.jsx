@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import BannerImage from "./BannerImage";
 
 const HomeBanner = () => {
+    const navigate = useNavigate();
+
+    const handleShopNow = () => {
+        navigate('/dashboard');
+    };
+
     return (
         <div className="mb-10 md:mb-20">
             <div className="bg-[#9538E2] flex flex-col gap-6 justify-start items-center text-white text-center p-4 min-h-[70vh] mx-4 lg:mx-10 rounded-3xl -mt-10">
@@ -11,7 +18,9 @@ const HomeBanner = () => {
                 <p className="text-base lg:w-1/2">
                     Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
                 </p>
-                <button className="btn bg-white text-[#9538E2] font-semibold lg:text-xl rounded-full px-8 z-10 mb-32">
+                <button
+                    onClick={handleShopNow}
+                    className="btn bg-white text-[#9538E2] font-semibold lg:text-xl rounded-full px-8 z-10 mb-32">
                     Shop Now
                 </button>
             </div>

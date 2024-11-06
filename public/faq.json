@@ -1,0 +1,50 @@
+[
+    {
+        "Shopping_Information": [
+            {
+                "question": "Delivery charges for orders from the Online Shop?",
+                "answer": "We only charge a small amount of money to deliver your order products. It actually varies on item weight and distance. When you pay for an item it’s included in your total charge."
+            },
+            {
+                "question": "How long will delivery take?",
+                "answer": "It takes a maximum of 7-30 days. Sometimes you will get it very fast depending on traffic or other delivery factors."
+            },
+            {
+                "question": "What exactly happens after ordering?",
+                "answer": "After your order, we carefully check and pack the products, and send them to your address. Sometimes, we call to confirm orders."
+            },
+            {
+                "question": "Do I receive an invoice for my order?",
+                "answer": "Yes, of course, you will receive it when you place or receive your order. Please keep it carefully for future reference or to return any incorrect item."
+            },
+            {
+                "question": "Do you offer delivery confirmation?",
+                "answer": "Yes, we do. You will receive a call when your product arrives at your destination."
+            }
+        ]
+    },
+    {
+        "Payment_Information": [
+            {
+                "question": "When is the order payment taken from my bank account?",
+                "answer": "As soon as you confirm your payment. Sometimes it takes a while, but you can check your payment status in your dashboard."
+            },
+            {
+                "question": "What is wishlist?",
+                "answer": "It’s a feature that allows customers to create personalized collections of products they want to buy and save them in their user account for future reference. Wishlists signify a customer’s interest in a product without an immediate intent to purchase."
+            },
+            {
+                "question": "What should I do if I receive a damaged or wrong product?",
+                "answer": "You can easily return or replace your products. For more information, check our return/replace section or call us via the provided number."
+            },
+            {
+                "question": "Can I change or cancel my order?",
+                "answer": "Yes, you can cancel your order within 1 hour after placing it. If you made a mistake, please contact our customer care."
+            },
+            {
+                "question": "What is package tracking in my orders?",
+                "answer": "Package tracking or package logging is the process of localizing shipping containers, mail, and parcels at different points during sorting, warehousing, and delivery to verify their provenance and to predict and aid in delivery."
+            }
+        ]
+    }
+]
