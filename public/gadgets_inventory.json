@@ -1,17 +1,17 @@
 [
     {
         "product_id": "531",
-        "product_title": "Samsung Galaxy S24",
+        "product_title": "Samsung Galaxy S24 Ultra",
         "product_image": "https://i.ibb.co.com/ZcfgxvZ/s24-ultra.jpg",
         "category": "Phones",
-        "price": 849,
-        "description": "The latest flagship smartphone with advanced camera technology and a powerful processor.",
+        "price": 1199,
+        "description": "The ultimate flagship smartphone with advanced camera technology, powerful processor, and high-resolution display.",
         "specification": [
-            "6.2-inch Dynamic AMOLED 2X display",
+            "6.8-inch Dynamic AMOLED 2X display",
             "Snapdragon 8 Gen 3",
-            "8GB RAM",
-            "256GB Storage",
-            "Triple rear camera with 50MP main lens"
+            "12GB RAM",
+            "512GB Storage",
+            "Quad rear camera with 108MP main lens"
         ],
         "availability": true,
         "rating": 4.8

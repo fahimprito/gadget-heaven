@@ -74,7 +74,7 @@ const ProductsDetails = () => {
                         </p>
                     </div>
                     <div>
-                        <p className="text-xl font-semibold text-gray-500 ">
+                        <p className="text-xl font-medium text-gray-500 ">
                             {description}
                         </p>
                     </div>
