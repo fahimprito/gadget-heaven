@@ -2,12 +2,16 @@ import { useLoaderData } from "react-router-dom";
 import HomeBanner from "../components/Banner/HomeBanner";
 import Categories from "../components/Categories/Categories";
 import Products from "../components/Products/Products";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     const categories = useLoaderData();
 
     return (
         <div className="bg-gradient-to-t from-base-200 ...">
+            <Helmet>
+                <title>Home | Gadget Heaven</title>
+            </Helmet>
             <div>
                 <HomeBanner></HomeBanner>
             </div>

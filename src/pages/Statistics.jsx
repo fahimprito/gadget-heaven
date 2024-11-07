@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner/Banner";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Helmet } from "react-helmet-async";
 
 
 const Statistics = () => {
@@ -13,6 +14,9 @@ const Statistics = () => {
 
     return (
         <div className="bg-base-200">
+            <Helmet>
+                <title>Statistics | Gadget Heaven</title>
+            </Helmet>
             <div>
                 <Banner
                     title={"Statistics"}

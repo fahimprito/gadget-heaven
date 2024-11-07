@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { createContext, useState } from "react";
+import { HelmetProvider } from "react-helmet-async";
 
 export const AddToCartItem = createContext([]);
 export const WishlistItem = createContext([]);
@@ -20,17 +21,19 @@ const MainLayout = () => {
                 closeOnClick={true}
                 draggable={true}
             />
-            <AddToCartItem.Provider value={[cartProduct, setCartProduct]}>
-                <WishlistItem.Provider value={[wishProduct, setWishProduct]}>
+            <HelmetProvider>
+                <AddToCartItem.Provider value={[cartProduct, setCartProduct]}>
+                    <WishlistItem.Provider value={[wishProduct, setWishProduct]}>
 
-                    <Navbar></Navbar>
-                    <div>
-                        <Outlet></Outlet>
-                    </div>
-                    <Footer></Footer>
+                        <Navbar></Navbar>
+                        <div>
+                            <Outlet></Outlet>
+                        </div>
+                        <Footer></Footer>
 
-                </WishlistItem.Provider>
-            </AddToCartItem.Provider>
+                    </WishlistItem.Provider>
+                </AddToCartItem.Provider>
+            </HelmetProvider>
         </div>
     );
 };

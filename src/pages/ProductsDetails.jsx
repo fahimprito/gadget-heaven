@@ -8,6 +8,7 @@ import { useContext, useEffect, useState } from "react";
 import { addWishList, getFullWishList } from "../utils/utilsForLocal";
 import { AddToCartItem, WishlistItem } from "../components/layouts/MainLayout";
 import { addCartItem, getFullCartList } from "../utils/addToCartUtils";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -47,6 +48,9 @@ const ProductsDetails = () => {
 
     return (
         <div className="bg-base-200 border">
+            <Helmet>
+                <title>{product_title} | Gadget Heaven</title>
+            </Helmet>
             <div className="">
                 <ProductDetailsBanner></ProductDetailsBanner>
             </div>

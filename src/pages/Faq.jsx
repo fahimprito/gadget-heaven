@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner/Banner";
 import FaqAccordion from "../components/FaqAccordion/FaqAccordion";
+import { Helmet } from "react-helmet-async";
 
 
 const Faq = () => {
@@ -12,6 +13,9 @@ const Faq = () => {
 
     return (
         <div className="bg-base-200">
+            <Helmet>
+                <title>FAQ | Gadget Heaven</title>
+            </Helmet>
             <div>
                 <Banner
                     title={"FAQs"}
