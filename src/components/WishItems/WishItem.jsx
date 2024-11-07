@@ -7,7 +7,7 @@ const WishItem = ({ product, handleRemove }) => {
 
     return (
         <div>
-            <div className="flex justify-between max-sm:items-start bg-white rounded-2xl p-4 mb-4">
+            <div className="flex justify-between items-start sm:items-center bg-white rounded-2xl p-4 mb-4">
                 <div className="flex max-sm:flex-col items-center gap-4">
                     <img className="w-36 rounded-2xl object-cover" src={product_image} alt="" />
                     <div className="flex flex-col gap-4">
