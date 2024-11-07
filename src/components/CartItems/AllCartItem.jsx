@@ -21,11 +21,17 @@ const AllCartItem = () => {
     return (
         <div>
             {
-                 cartProduct.map(product => <CartItem
-                    key={product.product_id}
-                    product={product}
-                    handleRemove={handleRemove}
-                ></CartItem>)
+                cartProduct.length === 0 ? (
+                    <div className="p-4">
+                        <p className="text-4xl text-center text-red-300 font-bold">Cart is empty</p>
+                    </div>
+                ) : (
+                    cartProduct.map(product => <CartItem
+                        key={product.product_id}
+                        product={product}
+                        handleRemove={handleRemove}
+                    ></CartItem>)
+                )
             }
 
         </div>
