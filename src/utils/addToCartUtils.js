@@ -37,4 +37,8 @@ const removeCartItem = (id) => {
     toast.warn('A product removed from cart!')
 }
 
-export { getFullCartList, addCartItem, removeCartItem }
+const clearCartItems = () => {
+    localStorage.removeItem("cartItem");
+}
+
+export { getFullCartList, addCartItem, removeCartItem, clearCartItems }
