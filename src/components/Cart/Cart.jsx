@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { AddToCartItem } from "../layouts/MainLayout";
 
 const Cart = () => {
-    const [cartProduct] = useContext(AddToCartItem);
+    const [cartProduct, setCartProduct] = useContext(AddToCartItem);
     const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
@@ -14,6 +14,11 @@ const Cart = () => {
 
     }, [cartProduct])
 
+    const handleSortbyPrice = () => {
+        const sortedProducts = [...cartProduct].sort((a, b) => b.price - a.price);
+        setCartProduct(sortedProducts);
+    }
+
     return (
         <div>
             <div className="flex flex-col sm:flex-row justify-between items-center">
@@ -21,6 +26,7 @@ const Cart = () => {
                 <div className="flex items-center md:gap-8 gap-2 max-sm:mt-4">
                     <h3 className="text-lg sm:text-2xl font-bold">Total cost: ${totalPrice}</h3>
                     <NavLink
+                        onClick={handleSortbyPrice}
                         className="btn btn-outline text-[#9538E2] hover:bg-[#7e2bc2] hover:border-[#9538E2] font-semibold lg:text-xl rounded-full px-4 sm:px-8">
                         Sort by Price <PiSlidersLight />
                     </NavLink>
