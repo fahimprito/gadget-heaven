@@ -34,7 +34,7 @@ const removeWishList = (id) => {
     const wishList = getFullWishList()
     const remaining = wishList.filter(product => product.product_id != id)
     localStorage.setItem('wishList', JSON.stringify(remaining))
-    toast.warn('A removed from wishlist!')
+    toast.warn('A product removed from wishlist!')
 }
 
 export { getFullWishList, addWishList, removeWishList }

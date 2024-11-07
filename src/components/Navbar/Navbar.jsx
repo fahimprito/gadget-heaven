@@ -3,11 +3,13 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { TbShoppingCart } from "react-icons/tb";
 import { FaRegHeart } from "react-icons/fa6";
 import { useContext, useEffect } from "react";
-import { WishlistItem } from "../layouts/MainLayout";
+import { AddToCartItem, WishlistItem } from "../layouts/MainLayout";
 import { getFullWishList } from "../../utils/utilsForLocal";
+import { getFullCartList } from "../../utils/addToCartUtils";
 // import "./Navbar.css"
 
 const Navbar = () => {
+    const [cartProduct, setCartProduct] = useContext(AddToCartItem);
     const [wishProduct, setWishProduct] = useContext(WishlistItem);
     const location = useLocation();
 
@@ -23,6 +25,11 @@ const Navbar = () => {
         <li><NavLink to={"/dashboard"}>Dashboard</NavLink></li>
         <li><NavLink to={"/faq"}>FAQ</NavLink></li>
     </>
+
+    useEffect(() => {
+        const cartData = getFullCartList();
+        setCartProduct(cartData)
+    }, [setCartProduct])
 
     useEffect(() => {
         const wishData = getFullWishList();
@@ -56,7 +63,7 @@ const Navbar = () => {
                         <div className={`relative text-xl border p-3 rounded-full ${cartWishIcon}`}>
                             <TbShoppingCart />
                             <span className="absolute -top-3 left-7 badge text-xs bg-red-100 border border-red-400">
-                                3
+                                {cartProduct.length}
                             </span>
                         </div>
                     </Link>

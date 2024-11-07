@@ -6,11 +6,13 @@ import { Rating, Star } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
 import { useContext, useEffect, useState } from "react";
 import { addWishList, getFullWishList } from "../utils/utilsForLocal";
-import { WishlistItem } from "../components/layouts/MainLayout";
+import { AddToCartItem, WishlistItem } from "../components/layouts/MainLayout";
+import { addCartItem, getFullCartList } from "../utils/addToCartUtils";
 
 
 
 const ProductsDetails = () => {
+    const [, setCartProduct] = useContext(AddToCartItem);
     const [wishProduct, setWishProduct] = useContext(WishlistItem);
     const [isWishlist, setIsWishlist] = useState(false);
     const { product_id } = useParams();
@@ -26,6 +28,14 @@ const ProductsDetails = () => {
         }
 
     }, [product_id])
+
+    const handleAddToCart = (product) => {
+        //add in local
+        addCartItem(product);
+        //add in context 
+        const cartData = getFullCartList();
+        setCartProduct(cartData);
+    }
 
     const handleAddToWishlist = (product) => {
         //add in context 
@@ -91,7 +101,12 @@ const ProductsDetails = () => {
 
                     <div className="flex gap-4">
 
-                        <button className="btn font-semibold lg:text-xl rounded-full border-gray-200 bg-[#9538E2] hover:bg-[#8126cc] text-white hover:text-white px-6">Add To Card <TbShoppingCart /></button>
+                        <button
+                            onClick={() => handleAddToCart(product)}
+                            className="btn font-semibold lg:text-xl rounded-full border-gray-200 bg-[#9538E2] hover:bg-[#8126cc] text-white hover:text-white px-6">
+                            Add To Cart <TbShoppingCart />
+                        </button>
+
                         <button
                             disabled={isWishlist}
                             onClick={() => handleAddToWishlist(product)}
