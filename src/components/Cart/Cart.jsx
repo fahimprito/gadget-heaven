@@ -4,11 +4,12 @@ import AllCartItem from "../CartItems/AllCartItem";
 import { useContext, useEffect, useState } from "react";
 import { AddToCartItem } from "../layouts/MainLayout";
 import tikLogo from "../../assets/Group.png"
-import { clearCartItems } from "../../utils/addToCartUtils";
+import { clearCartItems, getFullCartList } from "../../utils/addToCartUtils";
 
 const Cart = () => {
     const [cartProduct, setCartProduct] = useContext(AddToCartItem);
     const [totalPrice, setTotalPrice] = useState(0);
+    const [purchasePrice, setPurchasePrice] = useState(0);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -24,12 +25,20 @@ const Cart = () => {
 
     const handlePurchase = () => {
         document.getElementById('purchase_modal').showModal();
-    }
-    const handleCloseModal = () => {
         setCartProduct([]);
+    }
+
+    const handleCloseModal = () => {
         clearCartItems();
         navigate("/");
     }
+
+
+    useEffect(() => {
+        const cartLocalData = getFullCartList()
+        const cartPrice = cartLocalData.reduce((sum, product) => sum + product.price, 0);
+        setPurchasePrice(cartPrice);
+    }, [])
 
     return (
         <div>
@@ -66,7 +75,7 @@ const Cart = () => {
                         <h3 className="text-3xl font-bold">Payment Successful!</h3>
                         <div className="divider"></div>
                         <p className="text-xl text-gray-500 pb-4">Thanks for Purchasing.</p>
-                        <h3 className="text-xl text-gray-500 ">Total cost: ${totalPrice}</h3>
+                        <h3 className="text-xl text-gray-500 ">Total cost: ${purchasePrice}</h3>
                         <div className="modal-action grid grid-cols-1 w-full">
                             <form method="dialog">
                                 <button
