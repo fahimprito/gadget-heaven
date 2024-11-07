@@ -7,8 +7,8 @@ const WishItem = ({ product, handleRemove }) => {
 
     return (
         <div>
-            <div className="flex justify-between items-center bg-white rounded-2xl p-4 mb-4">
-                <div className="flex items-center gap-4">
+            <div className="flex justify-between max-sm:items-start bg-white rounded-2xl p-4 mb-4">
+                <div className="flex max-sm:flex-col items-center gap-4">
                     <img className="w-36 rounded-2xl object-cover" src={product_image} alt="" />
                     <div className="flex flex-col gap-4">
                         <h2 className="text-2xl font-bold">{product_title}</h2>
@@ -19,7 +19,7 @@ const WishItem = ({ product, handleRemove }) => {
                 </div>
                 <button
                     onClick={() => handleRemove(product_id)}
-                    className="text-4xl text-red-500 hover:bg-gray-200 rounded-full mr-6">
+                    className="text-4xl text-red-500 hover:bg-gray-200 rounded-full max-sm:mr-2 mr-6">
                     <MdOutlineCancel />
                 </button>
 
