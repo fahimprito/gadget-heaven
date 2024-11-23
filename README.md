@@ -5,9 +5,6 @@ GadgetHeaven is a responsive e-commerce platform crafted for gadget lovers, offe
 ### 🌐 Live Website
 [Click here to view GadgetHeaven live demo](https://gadget-heaven-fahim.netlify.app/)
 
-### 📄 Requirement Document
-[View the requirements document here](https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf)
-
 ---
 
 ## ⚛️ React Fundamentals Used
